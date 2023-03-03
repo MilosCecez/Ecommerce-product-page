@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+p {
+  font-size: 16px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.modal-images {
+  margin-top: 20px;
+}
+.modal-images .modal-img {
+  width: 100px;
+  cursor: pointer;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 72%;
+  border-bottom: 1px solid hsl(220deg, 14%, 75%);
+  padding: 40px 0px;
+}
+.header .header-left {
+  display: flex;
+}
+.header .header-left .navbar ul {
+  display: flex;
+  margin-left: 60px;
+}
+.header .header-left .navbar ul li {
+  list-style: none;
+  margin-right: 30px;
+}
+.header .header-left .navbar ul li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  color: hsl(219deg, 9%, 45%);
+}
+.header .header-right {
+  display: flex;
+  align-items: center;
+}
+.header .header-right .cart-logo {
+  position: relative;
+  margin-right: 60px;
+  cursor: pointer;
+}
+.header .header-right .cart-logo .cart-counter {
+  display: none;
+  position: absolute;
+  background-color: hsl(26deg, 100%, 55%);
+  top: -30%;
+  right: -20%;
+  height: 13px;
+  width: 17px;
+  border-radius: 50%;
+  font-size: 10px;
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+}
+.header .header-right .avatar {
+  width: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.header .header-right .avatar:hover {
+  border: 3px solid hsl(26deg, 100%, 55%);
+}
+.header .header-right .cart-menu {
+  display: none;
+  position: absolute;
+  top: 90%;
+  right: -5%;
+  background-color: red;
+  width: 400px;
+  height: auto;
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 25px 20px 6px hsla(0deg, 0%, 0%, 0.3);
+  border-radius: 10px;
+  padding: 30px 25px;
+}
+.header .header-right .cart-menu .cart-header {
+  border-bottom: 1px solid hsl(220deg, 14%, 75%);
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+.header .header-right .cart-menu .cart-content {
+  padding: 25px 0;
+}
+.header .header-right .cart-menu .cart-content .cart-item {
+  margin-top: 60px;
+}
+.header .header-right .cart-menu .cart-content .cart-item:nth-child(1) {
+  margin-top: 0px;
+}
+.header .header-right .cart-menu .cart-content .empty-cart {
+  text-align: center;
+  padding: 50px;
+  color: hsl(219deg, 9%, 45%);
+}
+.header .header-right .cart-menu .cart-content .cart-menu-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header-right .cart-menu .cart-content .cart-menu-info img {
+  width: 60px;
+}
+.header .header-right .cart-menu .cart-content .cart-menu-info .cart-menu-text {
+  color: hsl(219deg, 9%, 45%);
+  line-height: 32px;
+}
+.header .header-right .cart-menu .cart-content .cart-menu-info .cart-menu-text .cart-multiple span {
+  margin-left: 12px;
+  font-weight: bold;
+  color: hsl(0deg, 0%, 0%);
+}
+.header .header-right .cart-menu .cart-content .cart-menu-info .delete-product {
+  cursor: pointer;
+}
+.header .header-right .cart-menu .checkout-btn {
+  display: none;
+  width: 100%;
+  padding: 15px 0;
+  background-color: hsl(26deg, 100%, 55%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.header .header-right .cart-menu.opened {
+  display: block;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  padding: 100px 270px;
+  gap: 170px;
+}
+.section .image-content {
+  width: 100%;
+}
+.section .image-content .main-img {
+  width: 450px;
+}
+.section .image-content .modal-images {
+  display: flex;
+  justify-content: space-between;
+}
+.section .image-content .modal-images .modal-img.active {
+  opacity: 0.5;
+  border: 3px solid hsl(26deg, 100%, 55%);
+}
+.section .image-content .modal-images .modal-img:hover {
+  opacity: 0.75;
+}
+.section .text-content {
+  width: 60%;
+}
+.section .text-content h4 {
+  text-transform: uppercase;
+  color: hsl(26deg, 100%, 55%);
+  margin-bottom: 12px;
+}
+.section .text-content h2 {
+  font-size: 42px;
+  margin-bottom: 27px;
+}
+.section .text-content p {
+  color: hsl(219deg, 9%, 45%);
+  margin-bottom: 27px;
+  line-height: 25px;
+  width: 490px;
+}
+.section .text-content .price-info .price {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.section .text-content .price-info .price .discount {
+  margin-left: 15px;
+  background-color: hsl(25deg, 100%, 94%);
+  font-size: 15px;
+  padding: 5px;
+  color: hsl(26deg, 100%, 55%);
+  border-radius: 5px;
+}
+.section .text-content .price-info .old-price {
+  position: relative;
+  margin-top: 10px;
+  font-size: 17px;
+  color: hsl(220deg, 14%, 75%);
+  margin-bottom: 22px;
+}
+.section .text-content .price-info .old-price::after {
+  position: absolute;
+  content: "";
+  background-color: hsl(220deg, 14%, 75%);
+  width: 60px;
+  height: 1px;
+  left: 0;
+  top: 12px;
+}
+.section .text-content .product-add {
+  display: flex;
+  gap: 15px;
+}
+.section .text-content .product-add .counter {
+  background-color: red;
+  width: 25%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: hsl(223deg, 64%, 98%);
+  font-weight: bold;
+  cursor: pointer;
+}
+.section .text-content .product-add .cart-btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background-color: hsl(26deg, 100%, 55%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 5px 25px 40px hsla(26deg, 100%, 55%, 0.3);
+}
+.section .overlay {
+  display: none;
+  background-color: hsla(0deg, 0%, 0%, 0.75);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 120vh;
+  align-items: center;
+  justify-content: center;
+}
+.section .overlay .overlay-content {
+  position: absolute;
+  top: 17%;
+}
+.section .overlay .overlay-content .close-btn {
+  position: absolute;
+  right: 0;
+  top: -30px;
+  cursor: pointer;
+}
+.section .overlay .overlay-content .close-btn:hover {
+  color: hsl(26deg, 100%, 55%);
+}
+.section .overlay .overlay-content .main-img-change {
+  position: relative;
+}
+.section .overlay .overlay-content .main-img-change .previous-btn,
+.section .overlay .overlay-content .main-img-change .next-btn {
+  background-color: hsl(0deg, 0%, 100%);
+  position: absolute;
+  top: 45%;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+}
+.section .overlay .overlay-content .main-img-change .previous-btn svg,
+.section .overlay .overlay-content .main-img-change .next-btn svg {
+  margin: auto;
+  display: block;
+}
+.section .overlay .overlay-content .main-img-change .previous-btn {
+  left: -20px;
+}
+.section .overlay .overlay-content .main-img-change .next-btn {
+  right: -20px;
+}
+.section .overlay .overlay-content .main-img-change .main-img-overlay {
+  width: 550px;
+}
+.section .overlay .overlay-content .modal-images {
+  margin-top: 20px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.section .overlay .overlay-content .modal-images .modal-img-overlay {
+  width: 100px;
+  cursor: pointer;
+}
+.section .overlay .overlay-content .modal-images .modal-img-overlay.active {
+  opacity: 0.5;
+  border: 3px solid hsl(26deg, 100%, 55%);
+}
+.section .overlay .overlay-content .modal-images .modal-img-overlay:hover {
+  opacity: 0.75;
+}/*# sourceMappingURL=style.css.map */
